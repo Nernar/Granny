@@ -3,3 +3,6 @@
 /script/preloader.js
 /script/main.js
 .placeholder.ico
+
+# Established source
+/script/main/debug/

@@ -1,0 +1,51 @@
+IDRegistry.genBlockID("wardroomFence");
+Block.createBlock("wardroomFence", [
+	{ name: "Wardroom Fence", texture: [["house_floor", 0]], inCreative: IN_CREATIVE }
+]);
+
+Block.setShape(BlockID.wardroomFence, 0, 7/4, 0, 7/16, 7/4, 1/2);
+
+var renderer = new ICRender.Model();
+BlockRenderer.setStaticICRender(BlockID.wardroomFence, -1, renderer);
+var model = BlockRenderer.createModel();
+model.addBox(-1, 0, 3.000625, 0, 1, 3.000625, "wool", 11);
+model.addBox(-1, -1, 3.000625, 0, 0, 3.000625, "wool", 12);
+model.addBox(-1, 1, 3.000625, 0, 2, 3.000625, "wool", 15);
+model.addBox(0, 1, 3.000625, 1, 2, 3.000625, "wool", 9);
+model.addBox(1, 1, 3.000625, 2, 2, 3.000625, "wool", 3);
+model.addBox(1, 0, 3.000625, 2, 1, 3.000625, "wool", 5);
+model.addBox(1, -1, 3.000625, 2, 0, 3.000625, "wool", 2);
+model.addBox(1.999375, -1, 5, 1.999375, 0, 6, "wool", 2);
+model.addBox(1.999375, 0, 5, 1.999375, 1, 6, "wool", 5);
+model.addBox(1.999375, 1, 5, 1.999375, 2, 6, "wool", 3);
+model.addBox(1.999375, -1, 6, 1.9993745, 0, 7, "wool", 12);
+model.addBox(1.999375, 0, 6, 1.999375, 1, 7, "wool", 11);
+model.addBox(1.999375, 1, 6, 1.999375, 2, 7, "wool", 15);
+model.addBox(1.999375, 1, 9, 1.999375, 2, 10, "wool", 15);
+model.addBox(1.999375, 0, 9, 1.999375, 1, 10, "wool", 11);
+model.addBox(1.999375, -1, 9, 1.999375, 0, 10, "wool", 12);
+model.addBox(1.999375, 1, 7, 1.999375, 2, 8, "wool", 9);
+model.addBox(1.999375, 0, 7, 1.999375, 1, 8, "wool", 7);
+model.addBox(1.999375, -1, 7, 1.999375, 0, 8, "wool", 13);
+model.addBox(1.999375, 1, 8, 1.999375, 2, 9, "wool", 3);
+model.addBox(0.999375, -1, 2, 0.999375, 0, 3, BlockID.wardroomFence, 0);
+model.addBox(0.999375, 0, 2, 0.999375, 1, 3, BlockID.wardroomFence, 0);
+model.addBox(0.000625, 0, 2, 0.000625, 1, 3, BlockID.wardroomFence, 0);
+model.addBox(0.000625, -1, 2, 0.000625, 0, 3, BlockID.wardroomFence, 0);
+model.addBox(0, 0.999375, 2, 1, 1, 3, BlockID.wardroomFence, 0);
+model.addBox(-1/8, -1, 31/16, 0, 0, 2, BlockID.wardroomFence, 0);
+model.addBox(-1/8, 0, 31/16, 0, 1, 2, BlockID.wardroomFence, 0);
+model.addBox(1, -1, 31/16, 9/8, 0, 2, BlockID.wardroomFence, 0);
+model.addBox(1, 0, 31/16, 9/8, 1, 2, BlockID.wardroomFence, 0);
+model.addBox(1, 0, 3, 9/8, 1, 49/16, BlockID.wardroomFence, 0);
+model.addBox(1, -1, 3, 9/8, 0, 49/16, BlockID.wardroomFence, 0);
+model.addBox(-1/8, -1, 3, 0, 0, 49/16, BlockID.wardroomFence, 0);
+model.addBox(-1/8, 0, 3, 0, 1, 49/16, BlockID.wardroomFence, 0);
+model.addBox(-1/8, 1, 3, 0, 9/8, 49/16, BlockID.wardroomFence, 0);
+model.addBox(0, 1, 3, 1, 9/8, 49/16, BlockID.wardroomFence, 0);
+model.addBox(1, 1, 3, 9/8, 9/8, 49/16, BlockID.wardroomFence, 0);
+model.addBox(1, 1, 31/16, 9/8, 9/8, 2, BlockID.wardroomFence, 0);
+model.addBox(-1/8, 1, 31/16, 0, 9/8, 2, BlockID.wardroomFence, 0);
+model.addBox(0, 1, 31/16, 1, 9/8, 2, BlockID.wardroomFence, 0);
+model.addBox(2, 0.999375, 8, 3, 1, 9, BlockID.wardroomFence, 0);
+renderer.addEntry(model);

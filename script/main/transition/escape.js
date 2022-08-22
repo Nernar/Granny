@@ -1,0 +1,41 @@
+var transition = new Transition();
+transition.withFrom(20.51, 10.62, 13.4, 3.13, -0.21);
+
+transition.addFrame(0, 0, -0.8, -0.05, 0.05, 0.3);
+transition.addFrame(0, 0, -0.8, 0.05, -0.056, 0.3);
+transition.addFrame(0, 0, -0.8, 0, 0.05, 0.3);
+transition.addFrame(0, -0.5, -0.8, 0, -0.36, 0.3);
+transition.addFrame(0, -0.5, -0.8, -0.04, -0.04, 0.3);
+transition.addFrame(0, 0, -0.8, -0.04, 0.47, 0.3);
+transition.addFrame(0, 0, -1, -0.06, 0.06, 0.3);
+transition.addFrame(0, 0, -1, 0.06, -0.06, 0.3);
+transition.addFrame(0, 0, -1, 0.06, 0.06, 0.3);
+transition.addFrame(0, 0, -1, -0.06, -0.06, 0.3);
+transition.addFrame(0, 0, -1, -0.06, 0.06, 0.3);
+transition.addFrame(0, 0, -1, -2.14, 0.12, 0.3, Transition.Interpolator.ACCELERATE_DECELERATE);
+transition.addFrame(0, 0, -1, -0.037, 0.03, 0.3);
+transition.addFrame(0, 0, -1, 0.03, -0.03, 0.3);
+transition.addFrame(0, 0, -1, 0.03, 0.03, 0.3);
+transition.addFrame(0, 0, -1, -0.04, -0.05, 0.3);
+transition.addFrame(0, 0, -1, 0.77, -0.07, 0.3, Transition.Interpolator.ACCELERATE);
+transition.addFrame(0, 0, -1, 1.52, -0.05, 0.3, Transition.Interpolator.DECELERATE);
+transition.addFrame(0, 0, -1, 0.046, 0.03, 0.3);
+transition.addFrame(0, -0.3, -0.3, -0.15, -0.52, 2, Transition.Interpolator.ACCELERATE_DECELERATE);
+transition.addFrame(0, 0, 0, 0, 0.21, 1, Transition.Interpolator.ACCELERATE_DECELERATE);
+transition.addFrame(0, 0, 0, 0, -0.19, 0.7, Transition.Interpolator.DECELERATE);
+transition.addFrame(0, 0, 0, 0, 0.28, 1, Transition.Interpolator.ACCELERATE_DECELERATE);
+transition.addFrame(0, 0, 0, 0, -0.2, 0.7, Transition.Interpolator.DECELERATE);
+transition.addFrame(0, 0, 0, 0, 0.3, 1, Transition.Interpolator.ACCELERATE_DECELERATE);
+transition.addFrame(0, 0, 0, 0, -0.2, 0.7, Transition.Interpolator.DECELERATE);
+transition.addFrame(0, 0.3, 0, -1.2, 0.09, 0.8, Transition.Interpolator.ACCELERATE_DECELERATE);
+transition.addFrame(0, 0, 0, 0, 0.1, 1, Transition.Interpolator.ACCELERATE_DECELERATE);
+transition.addFrame(0, 0, 0, 0, -0.1, 0.7, Transition.Interpolator.DECELERATE);
+transition.addFrame(0, 0, 0, 0, 0.2, 1, Transition.Interpolator.ACCELERATE_DECELERATE);
+transition.addFrame(0, 0, 0, 0, -0.2, 0.7, Transition.Interpolator.ACCELERATE_DECELERATE);
+transition.addFrame(0, 0, 0, 2.14, 0.09, 1.6, Transition.Interpolator.ACCELERATE_DECELERATE);
+transition.addFrame(0, 0, 0, 2.22, 0.18, 0.4, Transition.Interpolator.ACCELERATE);
+
+Callback.addCallback("LevelLoaded", function() {
+	transition.withEntity(Player.get());
+	transition.start();
+});

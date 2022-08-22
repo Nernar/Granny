@@ -1,0 +1,95 @@
+IDRegistry.genBlockID("bathWardrobe");
+Block.createBlock("bathWardrobe", [
+	{ name: "Bath Wardrobe", texture: [["wardrobe", 0]], inCreative: IN_CREATIVE },
+	{ name: "Bath Wardrobe Passage", texture: [["wardrobe", 0]], inCreative: IN_CREATIVE }
+]);
+
+Block.setShape(BlockID.bathWardrobe, 0, -1, 0, 1, 5/4, 1);
+
+var renderer = new ICRender.Model();
+BlockRenderer.setStaticICRender(BlockID.bathWardrobe, 0, renderer);
+var model = BlockRenderer.createModel();
+model.addBox(-1/8, -1/4, 13/16, 0, 1/8, 7/8, "wardrobe", 1);
+model.addBox(1/16, 19/16, 0, 1, 5/4, 1, BlockID.bathWardrobe, 0);
+model.addBox(1/16, -1, 0, 1, -15/16, 1, BlockID.bathWardrobe, 0);
+model.addBox(15/16, -15/16, 0, 1, 1/16, 1, BlockID.bathWardrobe, 0);
+model.addBox(15/16, 1/16, 0, 1, 17/16, 1, BlockID.bathWardrobe, 0);
+model.addBox(15/16, 17/16, 0, 1, 19/16, 1, BlockID.bathWardrobe, 0);
+model.addBox(1/16, 17/16, 15/16, 15/16, 19/16, 1, BlockID.bathWardrobe, 0);
+model.addBox(1/16, 1/16, 15/16, 15/16, 17/16, 1, BlockID.bathWardrobe, 0);
+model.addBox(1/16, -15/16, 15/16, 15/16, 1/16, 1, BlockID.bathWardrobe, 0);
+model.addBox(1/16, -15/16, 0, 15/16, 1/16, 1/16, BlockID.bathWardrobe, 0);
+model.addBox(1/16, 1/16, 0, 15/16, 17/16, 1/16, BlockID.bathWardrobe, 0);
+model.addBox(1/16, 17/16, 0, 15/16, 19/16, 1/16, BlockID.bathWardrobe, 0);
+model.addBox(0, -1, 0, 1/16, 1/16, 1, BlockID.bathWardrobe, 0);
+model.addBox(0, 1/16, 0, 1/16, 3/8, 1, BlockID.bathWardrobe, 0);
+model.addBox(0, 1/2, 0, 1/16, 5/8, 1, BlockID.bathWardrobe, 0);
+model.addBox(0, 3/4, 0, 1/16, 7/8, 1, BlockID.bathWardrobe, 0);
+model.addBox(0, 1, 0, 1/16, 5/4, 1, BlockID.bathWardrobe, 0);
+model.addBox(0, 5/8, 0, 1/16, 3/4, 3/16, BlockID.bathWardrobe, 0);
+model.addBox(0, 7/8, 0, 1/16, 1, 3/16, BlockID.bathWardrobe, 0);
+model.addBox(0, 3/8, 0, 1/16, 1/2, 3/16, BlockID.bathWardrobe, 0);
+model.addBox(0, 3/8, 13/16, 1/16, 1/2, 1, BlockID.bathWardrobe, 0);
+model.addBox(0, 5/8, 13/16, 1/16, 3/4, 1, BlockID.bathWardrobe, 0);
+model.addBox(0, 7/8, 13/16, 1/16, 1, 1, BlockID.bathWardrobe, 0);
+model.addBox(0, 7/8, 9/16, 1/16, 1, 11/16, BlockID.bathWardrobe, 0);
+model.addBox(0, 7/8, 5/16, 1/16, 1, 7/16, BlockID.bathWardrobe, 0);
+model.addBox(0, 5/8, 5/16, 1/16, 3/4, 7/16, BlockID.bathWardrobe, 0);
+model.addBox(0, 3/8, 5/16, 1/16, 1/2, 7/16, BlockID.bathWardrobe, 0);
+model.addBox(0, 3/8, 9/16, 1/16, 1/2, 11/16, BlockID.bathWardrobe, 0);
+model.addBox(0, 5/8, 9/16, 1/16, 3/4, 11/16, BlockID.bathWardrobe, 0);
+renderer.addEntry(model);
+
+var collision = new ICRender.CollisionShape();
+BlockRenderer.setCustomCollisionShape(BlockID.bathWardrobe, 0, collision);
+var shape = collision.addEntry();
+shape.addBox(1/16, 19/16, 0, 1, 5/4, 1);
+shape.addBox(1/16, -1, 0, 1, -15/16, 1);
+shape.addBox(1/16, -15/16, 0, 1, 19/16, 1/16);
+shape.addBox(1/16, -15/16, 15/16, 1, 19/16, 1);
+shape.addBox(15/16, -15/16, 1/16, 1, 19/16, 15/16);
+shape.addBox(0, -15/16, 0, 1/16, 5/4, 1);
+
+var renderer = new ICRender.Model();
+BlockRenderer.setStaticICRender(BlockID.bathWardrobe, 1, renderer);
+var model = BlockRenderer.createModel();
+model.addBox(-13/16, -1/4, -1/8, -3/4, 1/8, 0, "wardrobe", 1);
+model.addBox(1/16, 19/16, 0, 1, 5/4, 1, BlockID.bathWardrobe, 1);
+model.addBox(1/16, -1, 0, 1, -15/16, 1, BlockID.bathWardrobe, 1);
+model.addBox(15/16, -15/16, 0, 1, 1/16, 1, BlockID.bathWardrobe, 1);
+model.addBox(15/16, 1/16, 0, 1, 17/16, 1, BlockID.bathWardrobe, 1);
+model.addBox(15/16, 17/16, 0, 1, 19/16, 1, BlockID.bathWardrobe, 1);
+model.addBox(1/16, 17/16, 15/16, 15/16, 19/16, 1, BlockID.bathWardrobe, 1);
+model.addBox(1/16, 1/16, 15/16, 15/16, 17/16, 1, BlockID.bathWardrobe, 1);
+model.addBox(1/16, -15/16, 15/16, 15/16, 1/16, 1, BlockID.bathWardrobe, 1);
+model.addBox(1/16, -15/16, 0, 15/16, 1/16, 1/16, BlockID.bathWardrobe, 1);
+model.addBox(1/16, 1/16, 0, 15/16, 17/16, 1/16, BlockID.bathWardrobe, 1);
+model.addBox(1/16, 17/16, 0, 15/16, 19/16, 1/16, BlockID.bathWardrobe, 1);
+model.addBox(-15/16, -1, 0, 1/16, 1/16, 1/16, BlockID.bathWardrobe, 1);
+model.addBox(-15/16, 1/16, 0, 1/16, 3/8, 1/16, BlockID.bathWardrobe, 1);
+model.addBox(-15/16, 1/2, 0, 1/16, 5/8, 1/16, BlockID.bathWardrobe, 1);
+model.addBox(-15/16, 3/4, 0, 1/16, 7/8, 1/16, BlockID.bathWardrobe, 1);
+model.addBox(-15/16, 1, 0, 1/16, 5/4, 1/16, BlockID.bathWardrobe, 1);
+model.addBox(-15/16, 5/8, 0, -3/4, 3/4, 1/16, BlockID.bathWardrobe, 1);
+model.addBox(-15/16, 7/8, 0, -3/4, 1, 1/16, BlockID.bathWardrobe, 1);
+model.addBox(-1/8, 3/8, 0, 1/16, 1/2, 1/16, BlockID.bathWardrobe, 1);
+model.addBox(-1/8, 5/8, 0, 1/16, 3/4, 1/16, BlockID.bathWardrobe, 1);
+model.addBox(-1/8, 7/8, 0, 1/16, 1, 1/16, BlockID.bathWardrobe, 1);
+model.addBox(-15/16, 3/8, 0, -3/4, 1/2, 1/16, BlockID.bathWardrobe, 1);
+model.addBox(-5/8, 3/8, 0, -1/2, 1/2, 1/16, BlockID.bathWardrobe, 1);
+model.addBox(-3/8, 3/8, 0, -1/4, 1/2, 1/16, BlockID.bathWardrobe, 1);
+model.addBox(-3/8, 5/8, 0, -1/4, 3/4, 1/16, BlockID.bathWardrobe, 1);
+model.addBox(-3/8, 7/8, 0, -1/4, 1, 1/16, BlockID.bathWardrobe, 1);
+model.addBox(-5/8, 7/8, 0, -1/2, 1, 1/16, BlockID.bathWardrobe, 1);
+model.addBox(-5/8, 5/8, 0, -1/2, 3/4, 1/16, BlockID.bathWardrobe, 1);
+renderer.addEntry(model);
+
+var collision = new ICRender.CollisionShape();
+BlockRenderer.setCustomCollisionShape(BlockID.bathWardrobe, 1, collision);
+var shape = collision.addEntry();
+shape.addBox(1/16, 19/16, 0, 1, 5/4, 1);
+shape.addBox(1/16, -1, 0, 1, -15/16, 1);
+shape.addBox(1/16, -15/16, 0, 1, 19/16, 1/16);
+shape.addBox(1/16, -15/16, 15/16, 1, 19/16, 1);
+shape.addBox(15/16, -15/16, 1/16, 1, 19/16, 15/16);
+shape.addBox(-15/16, -15/16, 0, 1/16, 5/4, 1/16);
