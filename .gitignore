@@ -1,5 +1,7 @@
-/.logging/
-/.todo/
-/script/preloader.js
-/script/main.js
+output
+tsconfig.json
+*.log
+*.icmod
+.logging/
+.todo/
 .placeholder.ico
